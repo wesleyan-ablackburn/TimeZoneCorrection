@@ -9,7 +9,6 @@ If (Test-Path -Path "C:\ProgramData\TimeZone") {
 
 Copy-Item -Path "$dirFiles\Correct-TimeZone.ps1" -Destination "C:\ProgramData\TimeZone\" -Force
 
-Write-Log -Message "Creating scheduled task..." -LogType CMTrace
 $Triggers = @()
 $TaskName = "Time Zone Correction"
 $TaskDescription = "This task ensures the device is set to ""Eastern Standard Time"" at boot up, login, and any time the time zone is changed."
